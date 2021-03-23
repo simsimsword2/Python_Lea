@@ -4,6 +4,7 @@
 
 import Modules
 import random
+import time
 
 '#---------------------------------------------------------------------------------------------------------------------'
 # testing:
@@ -15,11 +16,15 @@ print(a)
 Modules.bubblesort(a)
 print(a)
 
+start = time.time()
 
-for i in range(0,10) :
-    n = random.randint(1,100)
+for i in range(0, 1000):
+    n = random.randint(1, 1000)
     random_list.append(n)
 
 print(random_list)
 Modules.bubblesort(random_list)
 print(random_list)
+
+end = time.time()
+print("Das Sortieren der zufaelligen Liste dauerte", end-start, "s""")
